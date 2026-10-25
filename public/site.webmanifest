@@ -1,0 +1,24 @@
+{
+  "name": "Ikejimba Age Grade Foundation",
+  "short_name": "Ikejimba",
+  "description": "One age grade. A whole community's future. A repeatable model for bridging the digital divide from Akorufu Alayi, Abia State, Nigeria.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070706",
+  "theme_color": "#0a0908",
+  "lang": "en-NG",
+  "icons": [
+    {
+      "src": "assets/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
