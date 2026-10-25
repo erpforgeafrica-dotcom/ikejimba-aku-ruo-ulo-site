@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ikejimba.org/sitemap.xml
+Sitemap: https://ikejimba.onrender.com/sitemap.xml
+
