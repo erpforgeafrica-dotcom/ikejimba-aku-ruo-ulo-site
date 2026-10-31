@@ -1,6 +1,6 @@
-﻿# IMAGE ATTRIBUTIONS
+# IMAGE ATTRIBUTIONS
 
-All photography is **free-license stock from Pexels** (Pexels License â€” free to use, no attribution required),
+All photography is **free-license stock from Pexels** (Pexels License — free to use, no attribution required),
 downloaded locally to `assets/` so the site works offline and no hotlinking is needed.
 Source page for each photo: `https://www.pexels.com/photo/<ID>/`
 
@@ -30,13 +30,13 @@ Source page for each photo: `https://www.pexels.com/photo/<ID>/`
 | market-yams-lagos.jpg | Woman selling yams at a market | 14881680 |
 
 Notes:
-- All files â‰¤ 300 KB (site guide rule), JPEG verified.
+- All files ≤ 300 KB (site guide rule), JPEG verified.
 - To add more photos: download to `assets/`, add mapping in the gallery `SRC` object or reference directly in page markup.
 
 ## Foundation event photography (added 2026-10-30)
 
 These are the foundation's own photographs, supplied by the association (Dec 2025 gatherings at Alayi), not stock.
-They were selected, cropped and compressed (â‰¤300 KB) for the site:
+They were selected, cropped and compressed (≤300 KB) for the site:
 
 | File (assets/) | Source file | Subject |
 |---|---|---|
@@ -63,4 +63,4 @@ They were selected, cropped and compressed (â‰¤300 KB) for the site:
 | cultural-day-invitation.jpg | Brown and Yellow Traditional Dandiya and Garba Night Facebook Ad_20251207_105110_0000.png | Cultural Day invitation, kente edition |
 
 Curation note: funeral/memorial WhatsApp images, night snapshots and watermarked app screenshots from the source folder were deliberately excluded.
-The invitations spell the community "Akoliufu Alayi"; the site's existing copy uses "Akorufu Alayi" â€” the association should confirm the official spelling at Assembly.
+The invitations spell the community "Akoliufu Alayi"; the site's existing copy uses "Akorufu Alayi" — the association should confirm the official spelling at Assembly.
