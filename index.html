@@ -358,40 +358,22 @@ footer img{width:60px;border-radius:50%;margin-bottom:.8rem}
 .nav .bg{display:none;background:none;border:1px solid var(--line);color:var(--gold-soft);font-size:1.3rem;width:44px;height:44px}
 @media(max-width:820px){.nav .bg{display:block}.nav ul.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1.1rem;padding:1.4rem 6vw;background:rgba(2,2,2,.96)}}
 
-/* ===== SLIDE 2 â€” GOLDEN DOORWAY ===== */
-#s2{background:radial-gradient(ellipse at 50% 48%,#4a1710 0%,#210907 42%,#070202 100%)}
-#s2 .ukara,#gl{display:none}
-#s2 .dwrap{position:absolute;inset:0;perspective:1500px}
-#s2 .door{--w:min(40vh,74vw);position:absolute;left:50%;margin-left:calc(var(--w)/-2);top:calc(11vh + env(safe-area-inset-top,0px));width:var(--w);height:min(56vh,104vw);transform-style:preserve-3d;will-change:transform}
-#s2 .frame{position:absolute;inset:-16px -16px 0;border-radius:999px 999px 0 0;border:3px solid #d9b050;border-bottom:0;transform:translateZ(24px);box-shadow:0 0 70px rgba(230,170,60,.28),inset 0 0 0 9px #1a0605,inset 0 0 0 10px rgba(233,207,138,.55);pointer-events:none}
-#s2 .frame.f2{inset:-46px -46px 0;border:1px solid rgba(217,176,80,.4);border-bottom:0;box-shadow:none;transform:translateZ(-30px)}
-#s2 .glow{position:absolute;inset:0;border-radius:999px 999px 0 0;overflow:hidden;background:radial-gradient(ellipse at 50% 72%,#fff6d2 0,#f6c961 20%,#b9691c 48%,#4a160a 82%);opacity:.35;transform:translateZ(-4px)}
-#s2.active .glow{animation:glw 3.6s ease-out 1.4s both}@keyframes glw{from{opacity:.3}to{opacity:1}}
-#s2 .rays{position:absolute;left:50%;top:72%;width:240%;aspect-ratio:1;transform:translate(-50%,-50%);background:repeating-conic-gradient(rgba(255,244,200,.34) 0 3deg,transparent 3deg 11deg);-webkit-mask-image:radial-gradient(circle,#000 0,transparent 58%);mask-image:radial-gradient(circle,#000 0,transparent 58%);animation:rot 70s linear infinite}
-@keyframes rot{to{transform:translate(-50%,-50%) rotate(360deg)}}
-#s2 .sun{position:absolute;left:50%;top:70%;width:46%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fffdf0 0,#ffe9a0 40%,rgba(255,200,90,0) 70%);transform:translate(-50%,-50%) scale(.3);opacity:0}
-#s2.active .sun{animation:sunr 5s cubic-bezier(.2,.7,.2,1) 2s both}@keyframes sunr{to{transform:translate(-50%,-80%) scale(1.15);opacity:1}}
-#s2 .hills{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(#150503,#050101);clip-path:polygon(0 55%,18% 38%,36% 52%,58% 30%,80% 48%,100% 36%,100% 100%,0 100%)}
-#s2 .leaf{position:absolute;top:0;width:50%;height:100%;overflow:hidden;background:linear-gradient(90deg,#5c1a13,#2c0a07 55%,#431210);border:1px solid #c9a24a;box-shadow:inset 0 0 50px rgba(0,0,0,.65),0 0 0 1px #1a0705;backface-visibility:hidden}
-#s2 .leaf.l{left:0;border-top-left-radius:999px;transform-origin:left center}
-#s2 .leaf.r{right:0;border-top-right-radius:999px;transform-origin:right center}
-#s2 .leaf.r svg{transform:scaleX(-1)}
-#s2 .leaf svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 0 3px rgba(245,205,110,.7))}
-#s2 .leaf path{fill:none;stroke:#efd593;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1}
-#s2.active .leaf path{animation:dr 1.7s cubic-bezier(.5,0,.2,1) both}@keyframes dr{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-#s2 .leaf::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 42%,rgba(255,236,170,.28) 50%,transparent 58%);transform:translateX(-130%)}
-#s2.active .leaf::after{animation:sh 4s ease-in-out 1s infinite}@keyframes sh{to{transform:translateX(130%)}}
-#s2.active .leaf.l{animation:oL 3.8s cubic-bezier(.55,0,.15,1) 1.3s both}#s2.active .leaf.r{animation:oR 3.8s cubic-bezier(.55,0,.15,1) 1.3s both}
-@keyframes oL{to{transform:rotateY(-84deg)}}@keyframes oR{to{transform:rotateY(84deg)}}
-#s2 .spill{position:absolute;left:50%;top:100%;width:150%;height:26vh;margin-left:-75%;transform-origin:top;transform:rotateX(74deg);background:radial-gradient(ellipse at 50% 0,rgba(255,215,120,.6),transparent 66%);opacity:0}
-#s2.active .spill{animation:fadein 2.5s ease 3s both}@keyframes fadein{to{opacity:1}}
-#dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-#s2 .slide-copy{bottom:5vh}#s2 .rule,#s2 .village{display:none}
-@media(prefers-reduced-motion:reduce){#s2 .leaf.l{transform:rotateY(-84deg)}#s2 .leaf.r{transform:rotateY(84deg)}}
-
-#gl2{position:absolute;left:0;top:calc(6vh + env(safe-area-inset-top,0px));width:100%;height:76vh;pointer-events:none}
-#s2.gl .dwrap,#s2.gl #dust{display:none}
-#s2 .leaf svg{filter:drop-shadow(0 1.6px 0 rgba(0,0,0,.75)) drop-shadow(0 -1px 0 rgba(255,230,160,.35)) drop-shadow(0 0 3px rgba(245,205,110,.6))}
+/* ===== SLIDE 2 — AKU RUO ULO · THE WORLD ATLAS =====
+   An illustrated globe turns unevenly on a night-study backdrop; glowing
+   pockets mark where the set earns across the world, and every pocket
+   streams coins home to the beacon at Akoliufu Alayi. */
+#s2{background:
+  radial-gradient(120vmax 70vmax at 50% 34%,#0d1b3d 0%,#081027 42%,#04070f 80%,#020409 100%)}
+#s2 .medallion-stage,#s2 .medallion{display:none!important} /* slider JS touches .medallion; keep the dummy invisible */
+#atlas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transform-origin:50% 40%}
+#s2.active #atlas{animation:atl 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes atl{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+#s2 .slide-copy{bottom:6.5vh}
+#s2 .rule,#s2 .village{display:none}
+#s2 .motto{font-size:clamp(.9rem,2.2vw,1.18rem);max-width:66ch}
+@media(max-width:700px){
+  #copy2 .motto{font-size:clamp(.82rem,3.3vw,1rem)}
+}
 </style>
 
 <style id="glass-evolution">
@@ -604,10 +586,8 @@ footer{background:linear-gradient(180deg,#050505,#020202)}
 }
 
 /* ---- slide 2: deep plum hall + full-bleed portal ---- */
-#s2{
-  background:radial-gradient(ellipse at 50% 44%,#3c120b 0%,#1d0805 46%,#050101 100%);
-}
-#gl2{top:0;height:100%}
+#s2{background:radial-gradient(ellipse at 50% 44%,#0d1b3d 0%,#081027 42%,#04070f 80%,#020409 100%)}
+
 #s2 .slide-copy{z-index:6;bottom:6.5vh}
 #copy2{padding-top:2vh}
 #copy2::before{
@@ -839,23 +819,20 @@ footer>div:last-child{color:#9d8f66;letter-spacing:.2em;font-size:.72rem}
     </div>
   </section>
 
-  <!-- SLIDE 2 : NSIBIDI TUNNEL -->
+  <!-- SLIDE 2 : THE WORLD ATLAS — pockets of the set earning worldwide, wealth returning home -->
   <section class="slide" id="s2" aria-hidden="true">
     <div class="scene">
-      <div class="dwrap"><div class="door" id="door"><div class="frame f2"></div><div class="frame"></div>
-        <div class="glow"><div class="rays"></div><div class="sun"></div><div class="hills"></div></div>
-        <div class="leaf l"></div><div class="leaf r"></div><div class="spill"></div></div></div>
-      <canvas id="gl2" aria-hidden="true"></canvas>
-      <canvas id="dust" aria-hidden="true"></canvas>
+      <canvas id="atlas" aria-hidden="true"></canvas>
       <div class="medallion-stage" style="display:none"><span class="medallion"></span></div>
       <div class="slide-copy" id="copy2">
         <div class="rule"></div>
         <h1><span class="gold">AKU RUO ULO</span></h1>
-        <p class="motto">The door opens â€” knowledge comes home</p>
+        <p class="motto">Pockets of the set earn in every path of the world — the wealth returns home</p>
         <p class="village">Ikejimba Age Grade Foundation</p>
       </div>
     </div>
   </section>
+
 
   <div class="vignette"></div>
   <canvas id="fx"></canvas>
@@ -1363,7 +1340,7 @@ footer>div:last-child{color:#9d8f66;letter-spacing:.2em;font-size:.72rem}
   });
 })();
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <script>
 (function(){"use strict";
 const $=s=>document.querySelector(s),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1408,449 +1385,539 @@ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
 /* 3D tilt on event cards */
 document.querySelectorAll('.ev').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
 
-/* ===== SLIDE 2 : THE GOLDEN DOORWAY (Uli-carved doors open on the light of home) ===== */
+/* ===== SLIDE 2 : THE WORLD ATLAS — “AKU RUO ULO” ============================
+   An illustrated atlas of the world turns unevenly — like hands leafing
+   through a living map. As it turns, glowing pockets appear where members
+   of the set earn across the globe: Lagos, London, New York, Dubai,
+   Guangzhou, Houston, Tokyo... Every pocket streams gold coins along a
+   great-circle path home to the beacon at Akoliufu Alayi, and the beacon
+   grows brighter as the wealth returns. All drawn in canvas 2D — no
+   external assets. Honours prefers-reduced-motion. Replaces the old door
+   and WebGL threshold scenes.
+   ========================================================================= */
 (function(){
- let d=[],PD=window.__ULI=[];const A=p=>{PD.push(p);d.push(`<path pathLength="1" d="${p}" style="animation-delay:${(d.length*.035).toFixed(2)}s"/>`)};
- const P=Math.PI*2;
- A('M10 452V160A150 150 0 0 1 160 10');A('M24 440V166A136 136 0 0 1 160 24');
- [[160,108,36],[160,262,64],[160,416,36]].forEach(([x,y,r])=>{
-  [r,r*.74,r*.42].forEach(q=>A(`M${x-q} ${y}a${q} ${q} 0 1 0 ${2*q} 0a${q} ${q} 0 1 0 ${-2*q} 0`));
-  let sp='',pt='';for(let i=0;i<16;i++){const a=i/16*P,c=Math.cos(a),s=Math.sin(a);sp+=`M${x+c*r*.42} ${y+s*r*.42}L${x+c*r*.74} ${y+s*r*.74}`}
-  for(let i=0;i<12;i++){const a=i/12*P,b=a+.26,c=a-.26,R=r*1.0,q=r*.74,m=a;pt+=`M${x+Math.cos(m)*q} ${y+Math.sin(m)*q}Q${x+Math.cos(b)*(R+q)/2*1.12} ${y+Math.sin(b)*(R+q)/2*1.12} ${x+Math.cos(m)*R*1.18} ${y+Math.sin(m)*R*1.18}Q${x+Math.cos(c)*(R+q)/2*1.12} ${y+Math.sin(c)*(R+q)/2*1.12} ${x+Math.cos(m)*q} ${y+Math.sin(m)*q}`}
-  A(sp);A(pt)});
- [185,338].forEach(y=>{A(`M160 ${y}C128 ${y-34} 96 ${y-34} 74 ${y-6}`);let sp='M74 '+(y-6);for(let t=0;t<12.5;t+=.25){const r=26*(1-t/14);sp+=`L${(60+Math.cos(t+.6)*r).toFixed(1)} ${(y+Math.sin(t+.6)*r).toFixed(1)}`}A(sp);
-  A(`M112 ${y-27}q14 -22 30 -6q-14 20 -30 6z`);A(`M96 ${y-30}q-6 -20 -24 -22q4 20 24 22z`);A(`M160 ${y+14}C128 ${y+46} 96 ${y+46} 74 ${y+18}`)});
- let dm='',dt='';for(let y=190;y<=440;y+=34){dm+=`M38 ${y-9}l9 9l-9 9l-9 -9z`}
- for(let y=60;y<=440;y+=17){dt+=`M32 ${y}a1.6 1.6 0 1 0 .1 0`}A(dm);A(dt);
- const svg=`<svg viewBox="0 0 160 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${d.join('')}</svg>`;
- document.querySelectorAll('#s2 .leaf').forEach(l=>l.innerHTML=svg);
- /* gold dust rising from the doorway */
- const cv=document.getElementById('dust'),c=cv.getContext('2d'),s2=document.getElementById('s2'),dr=matchMedia('(prefers-reduced-motion: reduce)').matches;let W,H,pts=[];
- function rs(){const k=Math.min(devicePixelRatio||1,2);W=cv.width=cv.clientWidth*k;H=cv.height=cv.clientHeight*k}rs();addEventListener('resize',rs);
- for(let i=0;i<70;i++)pts.push({x:Math.random(),y:Math.random(),v:.0004+Math.random()*.0008,r:.6+Math.random()*1.8,p:Math.random()*6});
- const door=document.querySelector('#s2 .door');let tx=0,ty=0,px=0,py=0;
- addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
- (function loop(t){requestAnimationFrame(loop);if(!s2.classList.contains('active')||s2.classList.contains('gl'))return;
-  px+=(tx-px)*.05;py+=(ty-py)*.05;if(!dr)door.style.transform=`rotateY(${px*14}deg) rotateX(${-py*7}deg)`;
-  c.clearRect(0,0,W,H);c.globalCompositeOperation='lighter';
-  pts.forEach(q=>{q.y-=q.v*16;q.x+=Math.sin(t/1600+q.p)*.0004;if(q.y<-.02){q.y=1.02;q.x=.2+Math.random()*.6}
-   const a=Math.sin(Math.PI*Math.max(0,Math.min(1,q.y)))*.8;c.fillStyle=`rgba(255,214,120,${a})`;c.beginPath();c.arc(q.x*W,q.y*H,q.r*(W/900+.6),0,7);c.fill()})})(0)
-})();
+const cv=document.getElementById('atlas');
+if(!cv||!cv.getContext)return;
+const s2=document.getElementById('s2');
+if(!s2)return;
+const c=cv.getContext('2d');
+if(!c)return;
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const D2R=Math.PI/180, TAU=Math.PI*2;
+const cl=(v,a,b)=>v<a?a:v>b?b:v;
+const sm=(a,b,v)=>cl((v-a)/(b-a),0,1);
 
-/* ===== SLIDE 2 : THE THRESHOLD - a cinematic golden portal ==========
-   A stepped-gold archivolt in a dark plum hall. Behind it: sun, sky,
-   hills. Panelled doors part slowly; gold dust drifts; floor catches
-   the spill. Warm palette only. */
-(function(){try{
-const s2=document.getElementById('s2'),cv=document.getElementById('gl2');
-if(!window.THREE||!cv)return;
-const T=THREE,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true,powerPreference:'high-performance'});
-R.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
-R.outputEncoding=T.sRGBEncoding;
-R.toneMapping=T.ACESFilmicToneMapping;
-R.toneMappingExposure=1.0;
-
-const sc=new T.Scene();
-const cam=new T.PerspectiveCamera(30,1,.1,90);
-const REST_Z=12.3, NEAR_Z=11.5;
-cam.position.set(0,2.15,REST_Z);
-
-const mk=(w,h,f)=>{const c=document.createElement('canvas');c.width=w;c.height=h;f(c.getContext('2d'));return c};
-const cvT=(c,srgb)=>{const t=new T.CanvasTexture(c);if(srgb!==false)t.encoding=T.sRGBEncoding;t.anisotropy=8;return t};
-
-/* ---------- environment: warm studio gold ---------- */
-const envC=mk(512,256,x=>{
- const g=x.createLinearGradient(0,0,0,256);
- g.addColorStop(0,'#fff6dd');g.addColorStop(.4,'#e9c47e');g.addColorStop(.66,'#6d3f14');g.addColorStop(1,'#060302');
- x.fillStyle=g;x.fillRect(0,0,512,256);
- x.fillStyle='rgba(255,247,224,.8)';
- [64,186,304,436].forEach(a=>x.fillRect(a,26,16,118));
-});
-const et=new T.CanvasTexture(envC);et.mapping=T.EquirectangularReflectionMapping;et.encoding=T.sRGBEncoding;
-sc.environment=new T.PMREMGenerator(R).fromEquirectangular(et).texture;
-
-/* ---------- gold palette ---------- */
-const gold=(c,r)=>new T.MeshStandardMaterial({color:c,metalness:1,roughness:r,envMapIntensity:1.15});
-const gA=gold(0xe4c079,.22), gB=gold(0xc9a04b,.30), gC=gold(0x9d7328,.40), gD=gold(0x6f4a17,.52);
-
-/* ---------- carved leaf face (restrained Uli relief) ---------- */
-const carveC=mk(768,1408,x=>{
- x.fillStyle='#2c120d';x.fillRect(0,0,768,1408);
- /* faint vertical grain */
- for(let i=0;i<120;i++){
-  const px=Math.random()*768;
-  x.strokeStyle='rgba(255,206,140,'+(0.006+Math.random()*0.012)+')';
-  x.lineWidth=1+Math.random()*2;
-  x.beginPath();x.moveTo(px,0);x.bezierCurveTo(px+10,470,px-10,940,px+4,1408);x.stroke();
- }
- /* two recessed panels, fine gold fillet */
- x.strokeStyle='rgba(226,188,120,.30)';x.lineWidth=2.2;
- x.strokeRect(58,58,652,536);
- x.strokeRect(58,662,652,688);
- x.strokeStyle='rgba(0,0,0,.35)';x.lineWidth=5;
- x.strokeRect(64,64,640,524);
- x.strokeRect(64,668,640,676);
- /* carved rosettes, one per panel */
- x.strokeStyle='rgba(236,203,140,.15)';x.lineWidth=2;
- x.fillStyle='rgba(236,203,140,.18)';
- [[330,96],[1000,118]].forEach(([cy,r])=>{
-  x.beginPath();x.arc(384,cy,r,0,7);x.stroke();
-  x.beginPath();x.arc(384,cy,r*.7,0,7);x.stroke();
-  for(let k=0;k<16;k++){
-   const a=k/16*Math.PI*2;
-   x.beginPath();x.arc(384+Math.cos(a)*r*.85,cy+Math.sin(a)*r*.85,2.6,0,7);x.fill();
+/* ---------- packed land geometry (Natural Earth 110m, quantized) ---------- */
+const LAND=(function(){try{
+ const bin=atob('fQEMuweBCgUJBQkjAiUAFQQAAgkEJAAiAwwGCAYBCvUT+QkfAxcGCQYDAAsECgYeAxAHDAUBFNMF4QkUCQYLAgcACRkHGwUfBSMDJwAVBgIGIgQOBgoICAYKBAoICAAYAgEIlQ+ZCRYDEgIJBxEFFwIRBgQEAQbZD5kJGAcLABUCFwQMBAEMsQz/CBIFEgIICQ0AFQATABcAEQQLBgoCFgMBGMkI8QgCBwMHBQcVAxMFFQAIBhUDEwMNBAAIEgYKAhIDBgoABgAMCggOAggHBAcICQQHAakEwRbNChAKHAcCAgQABgIEAgIABAAYBxQGBAIuAhAFCAMYBy4FJAU8BS4ERAMoByoELAYEBkECMwQPBi0CBAgGBgYGBQgbBA0GGwQoACQCGAccBhoGDgQHCBcEFwQjAh0CIQALBhUGDQYHEggDDgUaABoCDgcYAhYEFAQSBBgCAAYHBgQGFgIIBRoCEgQWABYCFgQSBBIEDgMKAxgEFgUWABQCFgAYAxYAGAAWABYAEgYSAhQFFAIQBgwFBAcMBxAGEgcWAxQFFgAUAhgAFgMWAwgGCwYJBhUACwYFBgUMDAMUAxQCFAMQBwYFFgMWAhYEEgISBRQADg4OCRIDFAAMBxYAFAMSBQ4GBgYQBxYCEAUKBxYCEAQQBBQCFgIWAg4ECgQECAMGBwYFBgcGBQYABgAGCAYGCAQGBQYDBggICAQMBgoGDAQICAgECgQQAAoGCgIOAgwECAYOAggFBwcRBQcFDQIPAAsFDQUJBwMHAAcIBwsDEQMJBwsFCwkDBwQHCgUMBQwHCAcCBwYHCAcEBwIPBAcCBwQHAwsJBwsHFQMJBQsHGQcXAxUFFQUPBxsAHQAZAx0ABgcYAxIFCgcTBx0CFwUDBwAHEgcEBxQHIgMcBxgFHAcoAygFHAUcBxAJCAcUBhoEHAYiBBwEKAAmAyIFCggWBCgAIAQeBCICIgIaBA0GBwYABiEAIQUhAAUGAgwGBBgEGgQUBBQEDggWAhYCCgIaABYCFAQUBBICFgYOBg4EBgYTBAYGCgYSAhIEEAYMBggIDAQSAwgFFAMABggIEgMEBxIDFgQUAhIDBgcSBhACEgISAhAEEgIOBAoGDAUQAgwJCgcSBAYGEAQWAAYHDgYQAhQAEAASAxIDBgUMBxAEFAASABIAEAIQAg4GEAIQAgwECAgKBhADBgcOBRICCgcMBRAEBgYOBBIEEAISBAwEDgIMBBADDgYKBA4ADgQEBgwEDgQQAg4ADgAQAwwFAgcOBwoFFAMKBQwHEAAOAgwIEAUQAw4DEAAQAA4TAwUDBw8FDwcECRICBQkJBwcHDAUSAxICCgYEBgoGCgQEBggICgISABACEAIIBgQGDAYQBAwECgYIAgwCEAAOABACEgAMBAgKBgUICQwDEAMQAhADDgAKAg4ADAUOAhIADgISAwoGCAQMBhQKCgMMBQoHFAkQAxAAEAISAgwGDAQSAAwEDAUIBQwHEgIKBRQFFAMQAAwGDAQOAg4DEAMQAg4ADgAOAxACEAQQABIAEAIOAAQIAggKBwIHBgkGBQ4FEgIUAA4AFgAQAhQDEgAMBwUHCgUSBRIFFAMWBRADEgAKBg4HDAUOBRQDEgMIBxIFDgcQAxQAEAAUABIDEgMSBRADDAcDBwsHBwcHBwkHFQULBRUFCQcLBw0HBwcFBwMJAAcIBwQHCAUeBQYHHQMbBR8ADwsDCQcHCwcWBQgJDgUUBxYHGAUkBwgJLgMEAwwFLAQkBwEWvQjfBhQLGAUJCREACQYFBw8HEwINBBEEFQgRCBcSDAMYDRQHCAgGDA4GDAMGCQEJqQezBgwHBQcXBwkGDwcJBhQKDgUBCOQInQYZAAAIAgYABAwHDgMAAwEQlhKNBRAHCAIOBAgDAhUHBQMPBQQNCwUACwILDAMMCQ4ABgEd0BWPBQQJDAgECQAHBwkLDQkHBgkPAA0HBwsJEQ0JCQURAAsGEwADBggMFBAMBAoGDggKCAgMBgQCCAoIASPqFcMEDBMADAYFBA0MBwwDCAYIAwUPBQkNAAUHAAcDBQcJCQsNCQMGCQIKDAcKEQYABgwGAgwACgkKAgQJBg8OBwwGAAgJDgUBDPIU4wIHBQkEDQgLCA0KAwYIAAgHCAUEBw4LAQimFpcCBgUFCQsDCQIDBgYGCAMBCcEWiQL2LAULBQMGCAQEAPcsBAQCAwkBBP4UiQIHAwcIAgQBBvIU7wECDwUCBQADBAAMATCgBtkBBBUECQMJAwUHCgUHBA0DBwUFAw8HEwkXCx8HFwcVDwMPCQkEDwYFCAAOBw4DDAIKCAQABAgMAgwFBgUKABAECAQKCAIIAgYECAAICA4KBAgDCAYDCgoACgYIBAkEBwHfAfgR3QEGDQwGBAkIBwMHBA8CCQQDBA8DCQYNEgkKCQwHAwUICwYTCAQGBwQCAhMMCwgHDA0EDwAJAAsIDwMPAwkFDwAJBQ0HDw0JBw8HBwUPBwkFDQMNAAULBxMADwkJBwkHDwYLBAIICQUPCw8ECwIJAhEECwoFDAMICQYRAgYIBQwJDQ8DCAgCCgYIAwwNDwsHBw0NBgAICwwJBgIEFQoNAA8IHwMVBxMFEQARCQ8FBQkHBw8ACwMPAgsADQMLCQUACQUJBw0CCwARCgsCAAoIAgQEAwYCCgAKCxADCgAIBwwABAkGAwwJDgMGBgcFDgYFBgcACAkMAwYFBAIKBAQCCAMIBgwCDQYKDgYIBgwGBgIGAwwGCgICBAQACAASBggGBAgKCAAIAggKDgYPCAIHCAYIBgUCDAgIBAgIAgAECAMABAgCCAIKBwoLCgAKAwUKCAwIBAUECAoKBggDDgIDCAsGCAIKBQgHDgUEAAoFCgQGAAQCCAkHCQcHBQMCBwcJBwkCBQwJDgcIBwoJBgAIBQIHEAcKBgQIAggCCAYOBQgCBAMIAgwEBAMGAggECAAGBgYECQILBAMACQYJAgkBBaIUqQEEBwsABwoIBQEGjA+lAQkAFQwOAggFBgcBB44UnwEHAAsCBQICBgoDBgUBBpoUmwEDAw0OAwgEAAYNAQ7GD6MBDQUDAgAGCAoQBgIEDgQKAAYCBgMHBRMJDQUBCd4OgwEGBQoCBAkTAw0DCQAGCAgAAQiuD4MBAwkZBRcCAAQOBAoFCgABCP4ThwEAAw0GCQYHBgIACAMMCQEG2BN3AwAJBAcGAAIKBwEWyg1tHgMEBh4JBgsYAxQLEwcTBhEAEQIPAhUGCwIJAx0GBQgPAAoQFAMOBwYAAQbsEGUJCwMMAgYEBAQFAQq+E28FAAkGBwoFDAICAgcGBQYLCAUBFYATWQkABQcJBQkFCQAPBgkEAAQOAwoCAggCAAIJCAAGBggGAwoKAAQFAAkBBfQPOQcFDQIDCBAAAQioEDMGDQ8GDwIJAA0ABAgUAgENkhNJBQUFCgUGBwQLCA0EBgQIBQYFBgUGBwYHAULiEBMEGxILDBIUCA4ADAUMBxIFHAseCwoJCgkCCxoLBAkPAwQLDgsKEwgAAAcMAwUFEAcABw0ABQQPAhECDQoJCAsOFQgPBQsHAg0NBwkEEwAPDhECBQUVAAYMCgQFEgkOHw4PABkQBQkHAwUGAAgNBhIGCgAABBkABwoPBAkIFgIIBhoHASzUDxYPEQ0DDwIdAA8DAw0ODwoGHgYDCQcECQsPBxAVBQcOEwANCQUHBggMEQcFBAIGDQoCEA0FAhUAFwsDBwQEDgMQBwAHDAYKBAwIGAIIDgoMBRQDFAAQDAEMjBASAw8JAgMLBgkFAwcKBxQEDAQGAgkKAwEing1fEwAPDhUMCQoNDgkMDRYPDAUOBw4PCgsMDQoREgMICgAaBQ4RDAsKCQ4REAAODQoPDAcHDwgFBgMCCwYLDAAICwUVAS3eDh4SERMDBwsADxENABEHGQMGEwkHCg0ACQYTBwcIDQANAgMUCQQJDgMOAhAICgwHDAQEDgYCFAQMDAgKBgYOCgwKCAwGAAgJAgcKBQwHAAcLAAIJDQcJDwoRARrmD4YBAgsACQURBxAJCQQNBQcTCAUMBAgLCAcJBwINCwUGCAwKBggGBgkMBAIIDAADDA4JAAkBCZQKZA8FCQwDGAYaDAsGCwgTAxEBB88HogEPAwUCBgQABggCBAABC8APpAEHBQcLBQcLDAQEBAQCCggCAw0MEAEI6A6WARcRCAwMCAoMCBAEDw0JAQieD74BCgUKAAAJCQcLBQAGAAgBDdgPwgEEEw0EAAUECwkFAAwFAAUKCgMABgsMEAABBZgP0gEFDwcICQwMAwEglg+oAgoFBAQCBQUJBgsFDwsHAw0EDQgDCAIUCwMJBAUACQ8IBwgFBwsKDwMJBAAGBgQFBAMHCQoFBgAQBgcCGgYOAQibCKQCBQUNAAkAAwYCAg4ACAMBCs8JngIHAwkCCwYCBAgAAgAMAwgFAgUBI4sJvgIOAwICDgAIBQQABAcIAgAHCAAGBwcHBwIJAAcAAwMHAwMEBwMHCwUCAwQLBAkDCwIHBQsGAgQOAwwABgIHCAAGCwICBAEJ5g2qAg8HDwQADggIEgQIAAQHBwkBELkTsgIFBQMCAAYFBgICAgIAAgACAgAGAwIDAgMGBwMABwUBB8MTygIFAAUCAwICAgYDBAMBA80T0gILAAICAQfbE9YCAwMHAgMCAAIEAgADAQX3E+ACAwMFBAICBAABKfsJ7AIGBw4CBgUOCwoHBAAKBQAFDAAMCQMFDQMLAA0CFwMKCAcECwIHBAUKCQMRBgUCFwQFAgYEEQINCwcAAwUJAwkCCAYEBggCCAQMAgQCDgMMAAEH2Qn8AgUABQgHBgIKBgMGDQEIkg/sAgcNCQ4DCgoQDAwIBQULAQXfCaoDEQUDBggCCgABBtEJqgMDDQUCAAgHBgACAQvqEKIEAgcJCQkECQUFCQsEAAgICAoABgYBCaoEugQNBwIFEQcJAgUGCAAEBAoAAQr8ArwECAcMAAwAAAUIAgMFFwMABBUCAQr4AeQEBw0CBwMJDQYJAhkIBAgSAxACAQmUAZQFCA0DFwcCCQcHBAAUBQoKAwEk0BHSBAcNAgkJDRUJHQAZEwsGAAwdBRUJEwAQDQsbDQkHBgQQCwQJChAGCAoQCAwKIAYQBRIcCgcYEAgGChQDEgYKEgIIFwAPDxEBBpgBogUFDQkEBQoEBgoGAQ/+EcIFDAMMBgITGQUPERkKCRETAAMQCAwQAAQWBgwSEQEI+wfoBQoDEAIJCQcAFQYFBgYEAQfdB5IGCQAXBA8IBgIUBRAJAQ+5D4gGCQMbCAcEDwYDBhECCQgCBBIFCAMQAwYFCAkQBwEggwesBgsPCgQKBQcFEAUGAhAFBQ0KAgIJBgsJDwcACwICDgUCEw8LAAwIEQQTAB8AAwQKBgkEDgoQGgoIDgYIAAUFAQrNEOAGEAIFEw4PCQAJCAcICQQFCAIEARX6EawGEB0ZBAsXEBEADQ0KCw0FDAIQAxIEDAAWCQ4AFhAIBwgGAgQLBhEAEQELbcQGHwsXBA4QCxAWDAwIDgASCwsLBA0BBcwB+gYLDxMKAwYYBgEIkROSBxEHCQQDCA4GCAIKAwgFASsxqgcTExIEEAMFDQ8PEAMQFQwDCBMGCRIDAwsJBwgJEQkVAB0FCQQLCQ8CDQcJAhgSDgIbBAUGEAQJCgIKGAMCCgsKFQIFBAYIBQQLCQAQCQgGEgwMDAMBBtsUvgcLAwsECwQQAg4DAQf1CeIHBwkJAgUEAAIIBAYAAQafCuwHFQsLAAUGDAYWAAEKvRX8BwoDCgIOBw4DDQUNBAcCDwAFAAET0wqaCAIHCAIKBRIHEgUCCQoADAUPBxkECwgRCRcLBwoXAw4IAg4GDgET6QGoCAUNEgsVDS8NDwMXAi0GEAYlCB4EAwQjBAwKGAIYCxoIFAUaCAEIvwmyCBMABQgICA4CDAUABwMDAqUKwRbQCCgNKhEDCwoFBQosAyAPEQkbAAARCQUPAA0GFwQFCBECEwMJBgQGFQUICQsHgC0AFQkXAg4JCg8IBQIHBQcfBC0NEQMZCxcLBwkZDCsPBwYRBxcCBQsVEQAHFAUFGQ8ABw8GBx0JBxMZBQURGREHDAcWCyQIFg4KAAgaAhwWHBAcDA4WFQALDykTDxQpBykbDAsjBRsDAgwbAhUJMQQ1BzUfPycaAwgLDgUKCBIAGBMADw0RAxUJGRkZBQ0XExcTCwsXCwsACwgXDQMFBwAHBQcHAg0JBQUDBwULBQkFAAcDAwYFCgcOFQQLABMHCREFDQcPAwMIAgwHEgwCDQ4HBAMFBwMABAUCBQIEBgQCAwQECAACCwIJBBcFDQkTBQoIBQYMCgkKDwcTDQsLEQAJCQgNDgMABw4HEgwOBwoAAgsXBQkJEQkJDRIJBhEKDwoNAA0LBwQJCgUDDwcNCQMNEw0VERUXDxcPEwMLBwcECQkXCRMDBRELAwUMBAYXBgkFFQ0PEQUNDBEQFQ4LCg8IHwMdDwsTCw8PFQ8HCgYKDQoPAgcICRAPCA8AAgwPAAMTCRcHDwINCgAGEQQPCAkKAwgJBAMKCwYLAg0DBwAHAgsGBQYPAAcNAA8MFQwDCAkMBQwFCAAMAwgHBgUICQgJCAMLBQoCCgQOAAwEDgcIAhIHCAcUAxQJDAsJEwsLAAkEBBQDEA8SAgYJAg0MBQoDCAMGCQoPAAIHBwkHAgMDBwIHAAMFCwAVBQANCQsZCxEVDQsRCwAJCQURBQcDBw0EFQAPBxEAGwkDCQ0GBREHBQsJBQ8OCRYHEAcICRAFFAMKERYHHgUWABIFEBkLCwIXFAgGBQYVDgsEBwoNDB8DGwAXAx8EEwQTAgcUCQINAxEJFQQRDhEECxANFAkDCwYHCQsCAgkABQQNBg0IBQQHCgcCCQMFAgcEBQIHAgUADAQIBAIGBwAJBQsEBwIAAAUOAgwACgAMCgwMCggEBgIDAwcDAwIPCAsIBwwDCgMGCwYHBAMABQUJBQcHBQcNCQIDBQUJAgsAAwkACwcDCQUFCwAHBQAHCQUJAAsFCQMNBQMHAwcRCRkHEQ0HAAUACwcLBQ8ABQMFBQUAAwUJAAcDCwAFCgAIAwQFDAUIAgAACAICAwgDBgUGAwYJBgkMBQ4NCgkECw4DDAIKCxIJBgkCBwoCBAcIBQQHDAsMCQwJAwIKAgYCBgMCBQcFDQUJBQUFBgkGDRgAAwYRChEMGwYJBAsQEwUDAAsUDwIFBhEFAwITBhMGBQgHChMEEQoJFA8KCwgJBgcIBQQHAwcJBQYFBgUCBwgHCAAOBBICDgQIAgYCCgAEAAgECAAIBgYAAAUDCwAJAwcHEQcTCxcPFw8TExcRDxkREQ0TEwMLBQMNCQUHBwMDCwcHAw0HBQkVAAsMBwAFBQsABQAJBAsIEQYFAgcDEQIPAhsCCQULBw0LCxEHEwkTEQcFCwsJBQANBg0ECwAFBAADEQMHBAUDBwkHDQcVCQcHAAcEAwAJBQ0DDQUJDQkDAwkJBQkLDRMRCwsNCRMHCQADBwsECQURBAsDBwATBw0DCwcJAwcGBwAJCAADAwQACgcKBgQADAsOCQ4DAAsUDQwHDAUQBQwHGAAUAwgHBgkOCRQFCg8OAA4DCgIOBg4ABgYQBAYICgYIAgwDCAUGBQoFCgACBggHDgMMCQoCAgUGBQwNEBEQDQ4LEAIGAgQEDAQMBQIGEgIOBwoHAgUIBQIABBEHBwIHBQ8ACQoHDAsKDQAPAA8DDwUZCQsHDwUPBAcADQILABUDCwURBwUABQARCA8MDwgNCgUCCwYLCAMGAwwHCgkGBQIFBAMGAwQFAgkICQAFBAIEBwIABAUMAggHDAkGCAIGDAQIAAgECAIQAxADCAIIBQgJBgAGAAgGBAYIAwYGDAoKBAIECgIIBAoMBgoQCAYOAg4MCAQMDAUUCA4CCgoKEAgMBgoQBgoKAAoHEAAQBQgADgoSAgoGEAYaAhwCCAMOBhIABgUKAhIGDAMDCQ4GAgUJCQAHBgUFDwsJBAsIAAQJBgMSBwgCDAMWCQgPDgUWBxIJCAQGCAMMBAgMCAoCFgUGBwYABAUQAwQFFgAQBRAHBgMMBggEDgAMAwQJBAYMBQwACAQEBAACBAgEDAIEBgwIDAMMBAgHBgYGCwANAg0JGQMNCBMABQcLAxEIEwALEAsKBgwLCBIOGgIGDB4DFAoSBBoAHAsYBxICDgMSCAQIBQoLBgkCBwQXDhMGDwoMAg4OCwYYBgAEDwMPAwsFDwMPBwALCAUQAgMHEwMXCwkEAgYRBgICEAYHBBkEAwYPAwcLDQ0ABQkDBQAHEwkJBwsGCwIHDgcFBRMABwUPCwcIAAQJAAsCEwcKCQkDCQAJCAUFBAsIBwcFCAkIBQALDwQECQsDBg8LAA8IBwwD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');
+ const u8=new Uint8Array(bin.length);
+ for(let i=0;i<bin.length;i++)u8[i]=bin.charCodeAt(i);
+ let p=0;
+ const rd=()=>{let v=0,s=0;for(;;){const b=u8[p++];v|=(b&127)<<s;if(!(b&128))return v;s+=7;}};
+ const zz=v=>(v>>>1)^-(v&1);
+ const polys=[];
+ const nP=rd();
+ for(let q=0;q<nP;q++){
+  const rings=[];
+  const nR=rd();
+  for(let j=0;j<nR;j++){
+   const n=rd();const ring=[];let x=0,y=0;
+   for(let k=0;k<n;k++){x+=zz(rd());y+=zz(rd());ring.push(x/8,y/8);}
+   rings.push(ring);
   }
- });
- /* edge shadow */
- const vg=x.createLinearGradient(0,0,768,0);
- vg.addColorStop(0,'rgba(0,0,0,.5)');vg.addColorStop(.14,'rgba(0,0,0,0)');
- vg.addColorStop(.86,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.5)');
- x.fillStyle=vg;x.fillRect(0,0,768,1408);
-});
-const carveT=cvT(carveC);
-const bumpT=new T.CanvasTexture(carveC);bumpT.encoding=T.LinearEncoding;
-const faceM=new T.MeshStandardMaterial({
- map:carveT,bumpMap:bumpT,bumpScale:.55,color:0xc9b39a,
- metalness:.35,roughness:.62,envMapIntensity:.55
-});
+  polys.push(rings);
+ }
+ return polys;
+}catch(e){console.warn('atlas: land pack failed to decode',e);return null}})();
 
-/* ---------- arch construction ---------- */
-const SPRING=2.9, INNER=1.59, DOORH=2.9, LEAFW=1.565;
-
-const archRing=(half,r,depth,mat,z)=>{
- const s=new T.Shape();
- s.moveTo(-half,0);s.lineTo(-half,SPRING);s.absarc(0,SPRING,half,Math.PI,0,true);
- s.lineTo(half,0);s.lineTo(-half,0);
- const hi=half-r;
- const hole=new T.Path();
- hole.moveTo(-hi,0.001);hole.lineTo(-hi,SPRING);hole.absarc(0,SPRING,hi,Math.PI,0,true);
- hole.lineTo(hi,0.001);hole.lineTo(-hi,0.001);
- s.holes.push(hole);
- const g=new T.ExtrudeGeometry(s,{depth:depth,bevelEnabled:true,bevelThickness:.02,bevelSize:.018,bevelSegments:2,curveSegments:64});
- const m=new T.Mesh(g,mat);m.position.z=z;return m;
+/* flatten all land points into one unit-vector table for fast projection */
+let PT=null,NSEG=null,PTS=0;
+if(LAND){
+ let n=0;
+ for(const poly of LAND)for(const r of poly)n+=r.length/2;
+ PT=new Float32Array(n*3);NSEG=[];
+ let o=0;
+ for(const poly of LAND)for(const r of poly){
+  const start=o;
+  for(let k=0;k<r.length;k+=2){
+   const lon=r[k]*D2R,lat=r[k+1]*D2R;
+   const cq=Math.cos(lat),z=Math.sin(lat);
+   PT[o*3]=cq*Math.cos(lon);PT[o*3+1]=cq*Math.sin(lon);PT[o*3+2]=z;o++;
+  }
+  NSEG.push([start,o-start]);
+ }
+ PTS=o;
+}
+const mkv=(lat,lon)=>{
+ const la=lat*D2R,lo=lon*D2R,cq=Math.cos(la);
+ return [cq*Math.cos(lo),cq*Math.sin(lo),Math.sin(la)];
 };
+const HOME={name:'AKOLIU FU ALAYI · HOME',v:mkv(5.55,7.56)};
+const POCKETS=[
+ {name:'LAGOS',        v:mkv(  6.46,   3.39), g:0},
+ {name:'LONDON',       v:mkv( 51.51,  -0.13), g:1},
+ {name:'NEW YORK',     v:mkv( 40.71, -74.01), g:2},
+ {name:'HOUSTON',      v:mkv( 29.76, -95.37), g:4},
+ {name:'TORONTO',      v:mkv( 43.65, -79.38), g:2},
+ {name:'BERLIN',       v:mkv( 52.52,  13.40), g:1},
+ {name:'DUBAI',        v:mkv( 25.20,  55.27), g:2},
+ {name:'NAIROBI',      v:mkv( -1.29,  36.82), g:6},
+ {name:'MUMBAI',       v:mkv( 19.08,  72.88), g:3},
+ {name:'GUANGZHOU',    v:mkv( 23.13, 113.26), g:3},
+ {name:'SINGAPORE',    v:mkv(  1.35, 103.82), g:5},
+ {name:'TOKYO',        v:mkv( 35.68, 139.69), g:2},
+ {name:'SYDNEY',       v:mkv(-33.87, 151.21), g:5},
+ {name:'JOHANNESBURG', v:mkv(-26.20,  28.05), g:4}
+];
+for(const P of POCKETS){
+ const dv=Math.acos(cl(P.v[0]*HOME.v[0]+P.v[1]*HOME.v[1]+P.v[2]*HOME.v[2],-1,1));
+ P.O=dv;P.sO=Math.sin(dv)||1e-6;P.ph=Math.random()*TAU;
+}
 
-sc.add(archRing(1.80,.075,.30,gB,-.02));
-sc.add(archRing(1.715,.05,.24,gA,.055));
-sc.add(archRing(1.655,.035,.14,gC,.115));
+/* ---------- view state ---------- */
+let W=0,H=0,DPR=1,cx=0,cy=0,R0=0,R=0,sized='';
+let yaw=7.56*D2R, tilt=6*D2R;          /* rotation (lon) + latitude tilt */
+let yawV=0, tSeen=-1, tPrev=0;
+let px=0,py=0,tx=0,ty=0;               /* pointer parallax eased/target */
+let ent=0;                              /* entrance progress 0..1 */
+let beacon=0;                           /* flash when coins arrive */
+let beacons=[];
+let stars=[];
+(function(){let s=9;const r=()=>{s^=s<<13;s^=s>>>17;s^=s<<5;return((s>>>0)%1000)/1000};
+ for(let i=0;i<110;i++)stars.push([r(),r()*.62,r()*.9+.2,r()*TAU]);})();
+const coins=[];let spawnT=0;
+let cvYaw=1,cvYawS=0,ctilt=1,ctiltS=0;
 
-/* plinths + sill */
-const plinth=new T.BoxGeometry(.46,.32,.52);
-[[-1.72,.16],[1.72,.16]].forEach(([x,y])=>{
- const p=new T.Mesh(plinth,gC);p.position.set(x,y,.16);sc.add(p);
- const cap=new T.Mesh(new T.BoxGeometry(.56,.05,.62),gA);cap.position.set(x,.335,.16);sc.add(cap);
-});
-const sill=new T.Mesh(new T.BoxGeometry(3.44,.07,.5),gD);sill.position.set(0,.035,.14);sc.add(sill);
+function resize(){
+ const w=cv.clientWidth,h=cv.clientHeight;
+ if(!w||!h)return;
+ const k=w+'x'+h;
+ if(k===sized)return;
+ sized=k;
+ DPR=Math.min(devicePixelRatio||1,1.75);
+ W=cv.width=Math.round(w*DPR);H=cv.height=Math.round(h*DPR);
+ cx=W*.5;cy=H*.40;
+ R0=Math.min(H*.46,W*.40);
+ if(RM)render(performance.now());
+}
+addEventListener('resize',()=>{sized='';resize();});
 
-/* ---------- doors ---------- */
-function makeLeaf(sign){
- const grp=new T.Group();
- const shape=new T.Shape();
- shape.moveTo(0,0);shape.lineTo(LEAFW,0);shape.lineTo(LEAFW,DOORH);shape.lineTo(0,DOORH);shape.lineTo(0,0);
- const geo=new T.ExtrudeGeometry(shape,{depth:.10,bevelEnabled:true,bevelThickness:.016,bevelSize:.014,bevelSegments:2,curveSegments:4});
- if(geo.attributes.uv){
-  const uv=geo.attributes.uv;
-  for(let i=0;i<uv.count;i++) uv.setXY(i,uv.getX(i)/LEAFW,uv.getY(i)/DOORH);
-  uv.needsUpdate=true;
- }
- const leaf=new T.Mesh(geo,[faceM,gD]);
- grp.add(leaf);
-
- const trim=(w,h,x,y,mat)=>{
-  const b=new T.Mesh(new T.BoxGeometry(w,h,.012),mat||gC);
-  b.position.set(x,y,.098);grp.add(b);
+/* orientation trig for this frame */
+function trig(){
+ cvYaw=Math.cos(yaw);cvYawS=Math.sin(yaw);
+ ctilt=Math.cos(tilt);ctiltS=Math.sin(tilt);
+}
+/* transform a unit vector into view space: return {x,y,z} (z>0 = front) */
+function view(v){
+ const ax=v[0]*cvYaw+v[1]*cvYawS;   /* component along ẑ east axis */
+ return {
+  x:-v[0]*cvYawS+v[1]*cvYaw,
+  y:-ctiltS*ax+ctilt*v[2],
+  z: ctilt*ax+ctiltS*v[2]
  };
- trim(.045,DOORH-.14,LEAFW-.028,DOORH/2,gB);   // outer stile
- trim(.045,DOORH-.14,.028,DOORH/2,gB);         // centre stile
- trim(LEAFW-.09,.045,LEAFW/2,DOORH-.028,gB);   // head rail
- trim(LEAFW-.09,.05,LEAFW/2,.03,gB);           // foot rail
- trim(LEAFW-.11,.022,LEAFW/2,DOORH*.60,gC);    // mid rail
- trim(LEAFW-.11,.018,LEAFW/2,DOORH*.28,gC);    // lower rail
-
- /* handle */
- const ring=new T.Mesh(new T.TorusGeometry(.075,.014,10,32),gB);
- ring.position.set(sign>0?LEAFW-.30:.30,DOORH*.47,.135);
- grp.add(ring);
- const plate=new T.Mesh(new T.CylinderGeometry(.042,.042,.01,24),gA);
- plate.rotation.x=Math.PI/2;plate.position.copy(ring.position);plate.position.z=.112;
- grp.add(plate);
- return grp;
 }
-const hingeR=new T.Group();hingeR.position.set(INNER,0,0);
-const leafR=makeLeaf(1);leafR.position.x=-LEAFW;hingeR.add(leafR);sc.add(hingeR);
-const hingeL=new T.Group();hingeL.position.set(-INNER,0,0);
-const leafL=makeLeaf(-1);leafL.scale.x=-1;leafL.position.x=LEAFW;hingeL.add(leafL);sc.add(hingeL);
+/* slerp between two unit vectors */
+function slerp(a,b,f,O,sS){
+ const w1=Math.sin((1-f)*O)/sS,w2=Math.sin(f*O)/sS;
+ return [a[0]*w1+b[0]*w2,a[1]*w1+b[1]*w2,a[2]*w1+b[2]*w2];
+}
 
-/* ---------- fanlight above the doors ---------- */
-const fanC=mk(640,420,x=>{
- const g=x.createRadialGradient(320,400,8,320,400,330);
- g.addColorStop(0,'#fffdf1');g.addColorStop(.3,'#ffe9b0');g.addColorStop(.7,'#e8a34a');g.addColorStop(1,'#6e3410');
- x.fillStyle=g;x.fillRect(0,0,640,420);
- x.strokeStyle='rgba(60,30,10,.5)';x.lineWidth=4;
- for(let i=0;i<=8;i++){
-  const a=Math.PI+(i/8)*Math.PI;
-  x.beginPath();x.moveTo(320,420);
-  x.lineTo(320+Math.cos(a)*420,420+Math.sin(a)*420);x.stroke();
+
+/* ---------- illustrated pocket glyphs ---------- */
+function glyph(g,x,y,s,a){ /* g: glyph id, drawn to the right of the pin */
+ c.save();c.translate(x,y);c.scale(s,s);c.globalAlpha*=a;
+ c.strokeStyle='#f3df9c';c.lineWidth=1.6/Math.max(s,.001);c.lineCap='round';c.lineJoin='round';
+ c.beginPath();
+ if(g===0){ /* stacked market coins */
+  c.ellipse(0,-2.2,4.4,1.7,0,0,TAU);c.moveTo(-4.4,0);c.ellipse(0,0,4.4,1.7,0,0,TAU);
+  c.moveTo(-4.4,2.2);c.ellipse(0,2.2,4.4,1.7,0,0,TAU);c.moveTo(-4.4,0);c.lineTo(-4.4,2.2);
+  c.moveTo(4.4,0);c.lineTo(4.4,2.2);
+ }else if(g===1){ /* laptop — remote work */
+  c.moveTo(-5,2.4);c.lineTo(-5,-3.4);c.quadraticCurveTo(-5,-4.6,-4,-4.6);c.lineTo(3,-4.6);
+  c.quadraticCurveTo(4,-4.6,4,-3.4);c.lineTo(4,2.4);c.moveTo(-7,2.4);c.lineTo(7,2.4);
+  c.lineTo(7,3.8);c.lineTo(-7,3.8);
+ }else if(g===2){ /* skyline — offices */
+  c.moveTo(-6,4);c.lineTo(-6,-2);c.lineTo(-2,-2);c.lineTo(-2,4);
+  c.moveTo(-2,4);c.lineTo(-2,-6);c.lineTo(2,-6);c.lineTo(2,4);
+  c.moveTo(2,4);c.lineTo(2,-3.4);c.lineTo(6,-3.4);c.lineTo(6,4);
+ }else if(g===3){ /* gear — industry */
+  for(let i=0;i<8;i++){const an=i/8*TAU;c.moveTo(Math.cos(an)*4.2,Math.sin(an)*4.2);c.lineTo(Math.cos(an)*6.4,Math.sin(an)*6.4);}
+  c.moveTo(4.2,0);c.arc(0,0,4.2,0,TAU);c.moveTo(1.5,0);c.arc(0,0,1.5,0,TAU);
+ }else if(g===4){ /* derrick — oil & extraction */
+  c.moveTo(-5,4.4);c.lineTo(-2,-5.4);c.lineTo(2,-5.4);c.lineTo(5,4.4);
+  c.moveTo(-4.2,1.4);c.lineTo(4.2,1.4);c.moveTo(-3.2,-1.6);c.lineTo(3.2,-1.6);
+  c.moveTo(-2,-5.4);c.lineTo(0,1.6);c.moveTo(0,1.6);c.lineTo(2,-5.4);
+ }else if(g===5){ /* freight — sea & air cargo */
+  c.moveTo(-6.6,1.6);c.quadraticCurveTo(-6.6,4.4,-3.4,4.4);c.lineTo(3.4,4.4);
+  c.quadraticCurveTo(6.6,4.4,6.6,1.6);c.lineTo(-6.6,1.6);
+  c.moveTo(-4.6,1.6);c.lineTo(-4.6,-3);c.lineTo(-2.2,-3);c.lineTo(-2.2,1.6);
+  c.moveTo(-1.6,1.6);c.lineTo(-1.6,-4.4);c.lineTo(1,-4.4);c.lineTo(1,1.6);
+  c.moveTo(2.2,1.6);c.lineTo(2.2,-2.6);c.lineTo(4.2,-2.6);c.lineTo(4.2,1.6);
+ }else{ /* sprout — the home frontier */
+  c.moveTo(0,4.6);c.lineTo(0,.4);
+  c.moveTo(0,.4);c.quadraticCurveTo(-3.6,-.6,-4,-4.2);c.quadraticCurveTo(-.4,-3,-0,-.4);
+  c.moveTo(0,.4);c.quadraticCurveTo(3.4,-1,3.8,-4.6);c.quadraticCurveTo(2.2,-3.8,.4,-.8);
  }
- x.lineWidth=4;x.strokeStyle='rgba(90,46,16,.62)';
- [130,250].forEach(r=>{x.beginPath();x.arc(320,420,r,Math.PI,0);x.stroke()});
-});
-const fanShape=new T.Shape();
-fanShape.moveTo(-INNER,0);fanShape.lineTo(INNER,0);
-fanShape.absarc(0,0,INNER,0,Math.PI,false);
-fanShape.lineTo(-INNER,0);
-const fanGeo=new T.ShapeGeometry(fanShape,48);
-if(fanGeo.attributes.uv){
- const uv=fanGeo.attributes.uv;
- for(let i=0;i<uv.count;i++) uv.setXY(i,(uv.getX(i)+INNER)/(2*INNER),uv.getY(i)/INNER);
- uv.needsUpdate=true;
+ c.stroke();c.restore();
 }
-const fan=new T.Mesh(fanGeo,new T.MeshBasicMaterial({map:cvT(fanC),toneMapped:false,transparent:true,opacity:.92}));
-fan.position.y=SPRING;fan.position.z=-.05;sc.add(fan);
 
-/* ---------- dark plum hall (opaque wall with arch aperture) ---------- */
-const wallC=mk(1024,800,x=>{
- const g=x.createRadialGradient(512,470,30,512,470,720);
- g.addColorStop(0,'#4b1a11');g.addColorStop(.34,'#2b0d08');
- g.addColorStop(.68,'#120503');g.addColorStop(1,'#030101');
- x.fillStyle=g;x.fillRect(0,0,1024,800);
- const h=x.createRadialGradient(512,430,10,512,430,290);
- h.addColorStop(0,'rgba(255,178,92,.16)');h.addColorStop(1,'rgba(255,150,70,0)');
- x.fillStyle=h;x.fillRect(0,0,1024,800);
-});
-const wallShape=new T.Shape();
-wallShape.moveTo(-18,0);wallShape.lineTo(18,0);wallShape.lineTo(18,14);wallShape.lineTo(-18,14);wallShape.lineTo(-18,0);
-const ap=new T.Path();
-ap.moveTo(-INNER,0.001);ap.lineTo(-INNER,SPRING);ap.absarc(0,SPRING,INNER,Math.PI,0,true);
-ap.lineTo(INNER,0.001);ap.lineTo(-INNER,0.001);
-wallShape.holes.push(ap);
-const wallUV=new T.ShapeGeometry(wallShape,48);
-if(wallUV.attributes.uv){
- const uv=wallUV.attributes.uv;
- for(let i=0;i<uv.count;i++) uv.setXY(i,(uv.getX(i)+18)/36,(uv.getY(i))/14);
- uv.needsUpdate=true;
+/* ---------- state drawing helpers ---------- */
+function limbClamp(p){ /* pull a back-facing point onto the horizon rim */
+ let n=Math.hypot(p.x,p.y);
+ if(n<1e-6)return {x:0,y:0};
+ return {x:p.x/n,y:p.y/n};
 }
-const wall=new T.Mesh(wallUV,new T.MeshBasicMaterial({map:cvT(wallC),toneMapped:false}));
-wall.position.z=-.42;sc.add(wall);
 
-/* soft warmth bleeding onto the hall around the portal */
-const kissC=mk(512,512,x=>{
- const g=x.createRadialGradient(256,256,40,256,256,250);
- g.addColorStop(0,'rgba(255,186,102,.45)');g.addColorStop(.55,'rgba(255,150,70,.14)');g.addColorStop(1,'rgba(255,140,60,0)');
- x.fillStyle=g;x.fillRect(0,0,512,512);
-});
-const kiss=new T.Mesh(new T.PlaneGeometry(8.6,7.4),
- new T.MeshBasicMaterial({map:cvT(kissC),transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,opacity:.3}));
-kiss.position.set(0,2.5,-.34);sc.add(kiss);
-
-/* ---------- horizon, sun, hills, rays ---------- */
-const skyC=mk(1024,768,x=>{
- const g=x.createLinearGradient(0,0,0,768);
- g.addColorStop(0,'#1c0805');g.addColorStop(.3,'#54200e');
- g.addColorStop(.5,'#a44c1b');g.addColorStop(.66,'#eb9c48');
- g.addColorStop(.78,'#ffe0a0');g.addColorStop(.88,'#6d3212');g.addColorStop(1,'#100402');
- x.fillStyle=g;x.fillRect(0,0,1024,768);
- const s=x.createRadialGradient(512,580,0,512,580,280);
- s.addColorStop(0,'#fffdf4');s.addColorStop(.16,'#ffedbc');
- s.addColorStop(.46,'rgba(255,198,112,.5)');s.addColorStop(1,'rgba(255,160,70,0)');
- x.fillStyle=s;x.fillRect(0,0,1024,768);
-});
-const sky=new T.Mesh(new T.PlaneGeometry(34,20),new T.MeshBasicMaterial({map:cvT(skyC),toneMapped:true}));
-sky.position.set(0,3.4,-7.2);sc.add(sky);
-
-const sunC=mk(256,256,x=>{
- const g=x.createRadialGradient(128,128,0,128,128,128);
- g.addColorStop(0,'rgba(255,253,242,1)');
- g.addColorStop(.2,'rgba(255,240,196,.92)');
- g.addColorStop(.52,'rgba(255,192,104,.34)');
- g.addColorStop(1,'rgba(255,150,60,0)');
- x.fillStyle=g;x.fillRect(0,0,256,256);
-});
-const sunTex=cvT(sunC);
-const sun=new T.Mesh(new T.PlaneGeometry(6.0,6.0),
- new T.MeshBasicMaterial({map:sunTex,transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,opacity:.85}));
-sun.position.set(0,2.5,-6.7);sc.add(sun);
-
-const hillsC=(h,col)=>mk(1024,260,x=>{
- x.clearRect(0,0,1024,260);x.fillStyle=col;x.beginPath();x.moveTo(0,260);
- for(let i=0;i<=16;i++){
-  const px=i/16*1024;
-  const py=112+Math.sin(i*1.7+h)*42+Math.sin(i*.63+h*2)*20;
-  x.lineTo(px,py);
+/* great-circle route: pocket → home, drawn as engraved dotted path */
+function route(P){
+ const N=54;
+ c.save();
+ c.setLineDash([2.2,4.6]);
+ c.lineWidth=1.05*DPR;
+ c.strokeStyle='rgba(244,220,150,.36)';
+ c.beginPath();
+ let started=false;
+ for(let i=0;i<=N;i++){
+  const f=i/N;
+  const lift=1+.115*Math.sin(Math.PI*f);      /* arc bulges above the surface */
+  const v=slerp(P.v,HOME.v,f,P.O,P.sO);
+  const w=view(v);
+  const rr=R0*lift;
+  let x,y;
+  if(w.z>0){x=w.x*rr;y=w.y*rr;}
+  else{const q=limbClamp(w);x=q.x*rr;y=q.y*rr;}
+  const sx=cx+x*DPR,sy=cy-y*DPR;
+  if(!started){c.moveTo(sx,sy);started=true;}else c.lineTo(sx,sy);
  }
- x.lineTo(1024,260);x.closePath();x.fill();
-});
-const hillFar=new T.Mesh(new T.PlaneGeometry(26,5.2),
- new T.MeshBasicMaterial({map:cvT(hillsC(1.2,'rgba(48,19,9,.85)')),transparent:true,depthWrite:false}));
-hillFar.position.set(0,1.5,-6.9);sc.add(hillFar);
-const hillNear=new T.Mesh(new T.PlaneGeometry(24,4.2),
- new T.MeshBasicMaterial({map:cvT(hillsC(3.4,'rgba(15,5,2,.96)')),transparent:true,depthWrite:false}));
-hillNear.position.set(0,1.1,-6.5);sc.add(hillNear);
-
-/* ray fan behind the arch */
-const rayC=mk(1024,1024,x=>{
- x.translate(512,512);x.globalCompositeOperation='lighter';
- for(let i=0;i<24;i++){
-  x.rotate(Math.PI*2/24);
-  const g=x.createLinearGradient(0,0,0,-512);
-  g.addColorStop(0,'rgba(255,232,180,.34)');g.addColorStop(.5,'rgba(255,196,110,.09)');g.addColorStop(1,'rgba(255,170,80,0)');
-  x.fillStyle=g;x.beginPath();x.moveTo(-6,0);x.lineTo(-22,-512);x.lineTo(22,-512);x.lineTo(6,0);x.closePath();x.fill();
- }
-});
-const rays=new T.Mesh(new T.PlaneGeometry(17,17),
- new T.MeshBasicMaterial({map:cvT(rayC),transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,opacity:0}));
-rays.position.set(0,2.6,-6.2);sc.add(rays);
-
-/* seam of light between the doors */
-const seamC=mk(64,512,x=>{
- const g=x.createLinearGradient(0,0,0,512);
- g.addColorStop(0,'rgba(255,246,214,0)');g.addColorStop(.16,'rgba(255,246,214,.95)');
- g.addColorStop(.84,'rgba(255,240,200,.95)');g.addColorStop(1,'rgba(255,240,200,0)');
- x.fillStyle=g;x.fillRect(0,0,64,512);
- const h=x.createLinearGradient(0,0,64,0);
- h.addColorStop(0,'rgba(0,0,0,1)');h.addColorStop(.5,'rgba(0,0,0,0)');h.addColorStop(1,'rgba(0,0,0,1)');
- x.globalCompositeOperation='destination-out';x.fillStyle=h;x.fillRect(0,0,64,512);
-});
-const seam=new T.Mesh(new T.PlaneGeometry(.14,DOORH),
- new T.MeshBasicMaterial({map:cvT(seamC),transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,opacity:0}));
-seam.position.set(0,DOORH/2,.085);sc.add(seam);
-
-/* ---------- floor, pool of light, reflection streak ---------- */
-const floor=new T.Mesh(new T.PlaneGeometry(30,12.6),
- new T.MeshStandardMaterial({color:0x0b0403,metalness:.9,roughness:.32,envMapIntensity:.35}));
-floor.rotation.x=-Math.PI/2;floor.position.set(0,0,6.3);sc.add(floor);
-const gndC=mk(512,512,x=>{
- const g=x.createLinearGradient(0,0,0,512);
- g.addColorStop(0,'#1a0a05');g.addColorStop(.45,'#2e1409');g.addColorStop(1,'#4a2410');
- x.fillStyle=g;x.fillRect(0,0,512,512);
-});
-const ground=new T.Mesh(new T.PlaneGeometry(30,15),new T.MeshBasicMaterial({map:cvT(gndC)}));
-ground.rotation.x=-Math.PI/2;ground.position.set(0,0,-7.4);sc.add(ground);
-
-const poolC=mk(512,512,x=>{
- const g=x.createRadialGradient(256,256,10,256,256,250);
- g.addColorStop(0,'rgba(255,226,164,.45)');g.addColorStop(.4,'rgba(255,196,110,.18)');
- g.addColorStop(1,'rgba(255,170,80,0)');
- x.fillStyle=g;x.fillRect(0,0,512,512);
-});
-const pool=new T.Mesh(new T.PlaneGeometry(7.4,5.2),
- new T.MeshBasicMaterial({map:cvT(poolC),transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,opacity:0}));
-pool.rotation.x=-Math.PI/2;pool.position.set(0,.012,2.6);sc.add(pool);
-
-const streakC=mk(256,512,x=>{
- const g=x.createLinearGradient(0,0,0,512);
- g.addColorStop(0,'rgba(255,220,150,0)');g.addColorStop(.35,'rgba(255,220,150,.5)');
- g.addColorStop(.75,'rgba(255,205,130,.14)');g.addColorStop(1,'rgba(255,200,130,0)');
- x.fillStyle=g;x.fillRect(0,0,256,512);
-});
-const streak=new T.Mesh(new T.PlaneGeometry(4.4,6.4),
- new T.MeshBasicMaterial({map:cvT(streakC),transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,opacity:0}));
-streak.rotation.x=-Math.PI/2;streak.position.set(0,.011,3.3);sc.add(streak);
-
-/* ---------- lights: warm gold only ---------- */
-const key=new T.PointLight(0xffc776,3.0,22);key.position.set(0,3.6,-1.4);sc.add(key);
-const rim=new T.DirectionalLight(0xfff0cf,.6);rim.position.set(-3.5,6,5);sc.add(rim);
-const fill=new T.PointLight(0xffb877,.9,18);fill.position.set(0,1.1,5.2);sc.add(fill);
-const bounce=new T.PointLight(0x8a3c12,.5,10);bounce.position.set(0,.2,-1);sc.add(bounce);
-const edge=new T.PointLight(0xffd394,2.0,4);edge.position.set(0,2.3,-.1);sc.add(edge);
-
-/* ---------- dust ---------- */
-const dotC=mk(64,64,x=>{
- const g=x.createRadialGradient(32,32,0,32,32,32);
- g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(.4,'rgba(255,244,214,.7)');
- g.addColorStop(1,'rgba(255,230,180,0)');
- x.fillStyle=g;x.fillRect(0,0,64,64);
-});
-const dotTex=cvT(dotC);
-function dustLayer(n,size,opacity,spread){
- const pos=new Float32Array(n*3),data=[];
- for(let i=0;i<n;i++){
-  pos[i*3]=(Math.random()-.5)*spread;
-  pos[i*3+1]=Math.random()*5.4+.1;
-  pos[i*3+2]=-2.5+Math.random()*6;
-  data.push({v:.0016+Math.random()*.006,ph:Math.random()*6.28});
- }
- const g=new T.BufferGeometry();
- g.setAttribute('position',new T.BufferAttribute(pos,3));
- const mat=new T.PointsMaterial({map:dotTex,color:0xffd9a0,size:size,transparent:true,
-  opacity:opacity,blending:T.AdditiveBlending,depthWrite:false,sizeAttenuation:true});
- const p=new T.Points(g,mat);sc.add(p);return {p,g,data};
-}
-const fine=dustLayer(220,.045,.75,7.5);
-const bokeh=dustLayer(42,.15,.42,8.5);
-
-/* pre-warm: compile shader programs + bake one frame now, so the slide
-   activates without a main-thread hitch (canvas is hidden at load) */
-cam.aspect=1.6;cam.updateProjectionMatrix();
-try{R.compile(sc,cam)}catch(err){}
-try{R.render(sc,cam)}catch(err){}
-
-/* ---------- motion ---------- */
-let t0=0,was=false,sized='',shown=false,px=0,py=0,tx=0,ty=0;
-addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
-const cl=(v,a,b)=>Math.max(a,Math.min(b,v));
-const easeIO=v=>v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2;
-const easeOut=v=>1-Math.pow(1-v,3);
-const smooth=(a,b,v)=>cl((v-a)/(b-a),0,1);
-
-function fit(){
- const w=cv.clientWidth,h=cv.clientHeight,k=w+'x'+h;
- if(k===sized||!w)return;
- sized=k;R.setSize(w,h,false);
- cam.aspect=w/h;cam.fov=w/h<0.9?39:30;cam.updateProjectionMatrix();
+ c.stroke();c.setLineDash([]);c.restore();
 }
 
-function drift(layer){
- const a=layer.g.attributes.position;
- for(let i=0;i<layer.data.length;i++){
-  const d=layer.data[i];
-  a.array[i*3+1]+=d.v;
-  a.array[i*3]+=Math.sin(performance.now()*.0004+d.ph)*.0009;
-  if(a.array[i*3+1]>5.6)a.array[i*3+1]=.05;
+/* ---------- coins (the money making its way home) ---------- */
+function spawn(now){
+ if(coins.length>64)return;
+ const front=POCKETS.filter(P=>{
+  const w=view(P.v);return w.z>.34&&ent>.85;
+ });
+ if(!front.length)return;
+ const P=front[(Math.random()*front.length)|0];
+ coins.push({P,f:0,spd:.055+Math.random()*.05,sz:(1+Math.random()*1.5)*DPR,
+  ph:Math.random()*TAU,burst:Math.random()<.24?(2+(Math.random()*3|0)):1});
+ spawnT=now+120+Math.random()*230;
+}
+function drawCoins(dt,now){
+ for(let i=coins.length-1;i>=0;i--){
+  const k=coins[i];
+  k.f+=k.spd*dt;
+  for(let b=0;b<(k.burst||1);b++){
+   const f=k.f-b*.05;
+   if(f<0||f>1)continue;
+   const lift=1+.115*Math.sin(Math.PI*f)*1.12;
+   const v=slerp(k.P.v,HOME.v,cl(f,0,1),k.P.O,k.P.sO);
+   const w=view(v);
+   const rr=R0*lift*DPR;
+   let sx,sy,fade=1;
+   if(w.z>0){sx=cx+w.x*rr;sy=cy-w.y*rr;}
+   else if(w.z>-.045){const q=limbClamp(w);sx=cx+q.x*rr;sy=cy-q.y*rr;fade=(w.z+.045)/.045*.5;}
+   else continue;
+   const tw=.7+.3*Math.sin(now*.012+k.ph+b*2.1);
+   c.globalCompositeOperation='lighter';
+   c.fillStyle='rgba(255,224,150,'+(.30*fade*tw)+')';
+   c.beginPath();c.arc(sx,sy,k.sz*2.5,0,TAU);c.fill();
+   c.fillStyle='rgba(255,238,190,'+(.92*fade*tw)+')';
+   c.beginPath();c.arc(sx,sy,k.sz*1.05,0,TAU);c.fill();
+   c.fillStyle='rgba(122,86,22,'+(.5*fade)+')';
+   c.beginPath();c.arc(sx,sy,k.sz*.42,0,TAU);c.fill();
+   c.globalCompositeOperation='source-over';
+  }
+  if(k.f>1){coins.splice(i,1);beacons.push({t:0});}
  }
- a.needsUpdate=true;
 }
 
-(function loop(now){
- requestAnimationFrame(loop);
- const on=s2.classList.contains('active')&&document.body.dataset.view==='home'&&!document.hidden;
- if(!on){was=false;return}
- if(!was){was=true;t0=now}
- fit();
- const e=rm?99:(now-t0)/1000;
- window.__THRESH={e:e};
 
- const open=rm?1:easeIO(cl((e-1.05)/4.8,0,1));
- hingeR.rotation.y=-1.92*open;
- hingeL.rotation.y= 1.92*open;
+/* ---------- main render ---------- */
+function render(nowMs){
+ if(!W)return;
+ const now=nowMs/1000;
+ trig();
+ R=R0*(1+.016*Math.sin(now*.37+2.2))*(1+(ent<1?(1-ent)*.05:0));
+ c.clearRect(0,0,W,H);
 
- const seamA=cl(smooth(.5,1.1,e),0,1)*(1-smooth(1.6,2.9,e));
- seam.material.opacity=seamA*.95;
+ const EA=Math.min(1,ent); /* entrance alpha */
+ c.globalAlpha=EA;
 
- const flood=smooth(1.1,5.3,e);
- key.intensity=3.0+8.5*flood;
- rays.material.opacity=.30*flood;
- rays.rotation.z=e*.011;
- sun.material.opacity=.55+.35*flood;
- sun.scale.setScalar(1+.05*Math.sin(e*.6)+.12*flood);
- pool.material.opacity=.5*flood;
- streak.material.opacity=.18*flood;
- fan.material.opacity=.5+.42*flood;
- kiss.material.opacity=.12+.26*flood;
+ /* --- night sky specks --- */
+ c.save();
+ for(const s of stars){
+  const a=(.05+.16*Math.abs(Math.sin(now*.6*s[2]+s[3])))*EA;
+  c.fillStyle='rgba(240,230,196,'+a+')';
+  c.beginPath();c.arc(s[0]*W,s[1]*H,(.5+s[2]*.8)*DPR,0,TAU);c.fill();
+ }
+ c.restore();
 
- px+=(tx-px)*.045;py+=(ty-py)*.045;
- const dolly=easeOut(cl(e/9,0,1));
- cam.position.set(px*.5,2.15-py*.28,REST_Z-(REST_Z-NEAR_Z)*dolly);
- cam.lookAt(0,2.15,0);
+ /* --- halo behind the globe --- */
+ c.save();
+ const halo=c.createRadialGradient(cx,cy,R0*.72,cx,cy,R0*1.9);
+ halo.addColorStop(0,'rgba(212,175,55,'+(.20*EA+beacon*.10)+')');
+ halo.addColorStop(.5,'rgba(150,110,40,'+(.09*EA)+')');
+ halo.addColorStop(1,'rgba(0,0,0,0)');
+ c.fillStyle=halo;
+ c.fillRect(cx-R0*2,cy-R0*2,R0*4,R0*4);
+ c.restore();
 
- drift(fine);drift(bokeh);
+ /* --- instrument ring (compass ticks, counter-drifting slowly) --- */
+ c.save();
+ c.translate(cx,cy);c.rotate(-now*.04);
+ c.strokeStyle='rgba(233,207,138,.20)';c.lineWidth=1*DPR;
+ c.beginPath();c.arc(0,0,R0*1.30,0,TAU);c.stroke();
+ for(let i=0;i<72;i++){
+  const a=i/72*TAU,big=i%6===0;
+  c.globalAlpha=EA*(big?.5:.26);
+  c.beginPath();c.moveTo(Math.cos(a)*R0*(big?1.265:1.28),Math.sin(a)*R0*(big?1.265:1.28));
+  c.lineTo(Math.cos(a)*R0*1.33,Math.sin(a)*R0*1.33);
+  c.stroke();
+ }
+ if('N E S W'.length){
+  c.fillStyle='rgba(233,207,138,.5)';
+  c.font=(11*DPR)+'px Georgia,serif';
+  c.textAlign='center';c.textBaseline='middle';
+  const CARD=[['N',0],['E',90],['S',180],['W',270]];
+  for(const [L,deg] of CARD){
+   const a=deg*D2R;
+   c.fillText(L,Math.cos(a)*R0*1.225,Math.sin(a)*R0*1.225);
+  }
+ }
+ c.restore();
+ c.globalAlpha=EA;
 
- cv.style.opacity=cl(e/.7,0,1);
- R.render(sc,cam);
- if(!shown){shown=true;s2.classList.add('gl')}
-})(0);
-}catch(err){console.warn('WebGL doorway unavailable, using CSS version',err)}})();
+ /* --- globe: clip to disc --- */
+ c.save();
+ c.beginPath();c.arc(cx,cy,R0*DPR,0,TAU);c.clip();
+
+ /* ocean */
+ const og=c.createRadialGradient(cx-R0*.3*DPR,cy-R0*.35*DPR,R0*.12,cx,cy,R0*1.02);
+ og.addColorStop(0,'#14224a');
+ og.addColorStop(.55,'#0c1636');
+ og.addColorStop(1,'#050a18');
+ c.fillStyle=og;
+ c.fillRect(cx-R0*DPR,cy-R0*DPR,R0*2*DPR,R0*2*DPR);
+
+ /* graticule — engraved atlas lines */
+ c.strokeStyle='rgba(233,207,138,.10)';c.lineWidth=1*DPR;
+ c.beginPath();
+ for(let la=-75;la<=75;la+=15){
+  let prev=null,broken=false;
+  for(let lo=-180;lo<=180;lo+=3){
+   const w=view(mkv(la,lo));
+   if(w.z<=0){prev=null;continue;}
+   const sx=cx+w.x*R*DPR,sy=cy-w.y*R*DPR;
+   if(!prev||broken){c.moveTo(sx,sy);broken=false;}else c.lineTo(sx,sy);
+   prev=[sx,sy];
+  }
+ }
+ for(let lo=0;lo<180;lo+=15){
+  let broken=false;
+  for(let la=-88;la<=88;la+=3){
+   const w=view(mkv(la,lo));
+   if(w.z<=0){broken=true;continue;}
+   const sx=cx+w.x*R*DPR,sy=cy-w.y*R*DPR;
+   if(broken){c.moveTo(sx,sy);broken=false;}else c.lineTo(sx,sy);
+  }
+ }
+ c.stroke();
+ /* equator a touch stronger */
+ c.strokeStyle='rgba(233,207,138,.17)';
+ c.beginPath();
+ {let broken=false;
+ for(let lo=-180;lo<=180;lo+=3){
+  const w=view(mkv(0,lo));
+  if(w.z<=0){broken=true;continue;}
+  const sx=cx+w.x*R*DPR,sy=cy-w.y*R*DPR;
+  if(broken){c.moveTo(sx,sy);broken=false;}else c.lineTo(sx,sy);
+ }}
+ c.stroke();
+
+ /* land — shadow pass, fill pass, ink pass */
+ if(PT){
+  const draw=(dx,dy,fill,stroke,lw)=>{
+   c.fillStyle=fill;c.strokeStyle=stroke;c.lineWidth=lw*DPR;
+   for(const [start,len] of NSEG){
+    c.beginPath();
+    let broken=true;
+    for(let i=0;i<len;i++){
+     const v=[PT[(start+i)*3],PT[(start+i)*3+1],PT[(start+i)*3+2]];
+     const w=view(v);
+     let sx,sy;
+     if(w.z>0){sx=cx+w.x*R*DPR;sy=cy-w.y*R*DPR;}
+     else{const q=limbClamp(w);sx=cx+q.x*R*DPR;sy=cy-q.y*R*DPR;}
+     if(broken){c.moveTo(sx,sy);broken=false;}else c.lineTo(sx,sy);
+    }
+    if(fill){c.closePath();c.fill();}
+    if(stroke)c.stroke();
+   }
+  };
+  draw(2*DPR,2.6*DPR,null,'rgba(0,0,0,.45)',2.6);
+  draw(0,0,'rgba(216,178,90,.20)','#f0dc9f',0);
+  c.save();
+  c.globalAlpha*=.9;
+  draw(0,0,null,'rgba(244,222,150,.5)',1.15);
+  c.restore();
+ }
+
+ /* inner rim shadow (atlas disc depth) */
+ const ish=c.createRadialGradient(cx,cy,R0*.7,cx,cy,R0);
+ ish.addColorStop(0,'rgba(0,0,0,0)');
+ ish.addColorStop(.86,'rgba(0,0,0,.10)');
+ ish.addColorStop(1,'rgba(0,0,0,.5)');
+ c.fillStyle=ish;
+ c.fillRect(cx-R0*DPR,cy-R0*DPR,R0*2*DPR,R0*2*DPR);
+ c.restore();
+
+ /* rim stroke */
+ c.strokeStyle='rgba(233,207,138,.42)';c.lineWidth=1.6*DPR;
+ c.beginPath();c.arc(cx,cy,R0*DPR,0,TAU);c.stroke();
+ c.strokeStyle='rgba(255,240,200,.20)';c.lineWidth=.7*DPR;
+ c.beginPath();c.arc(cx,cy,R0*1.014*DPR,0,TAU);c.stroke();
+
+ /* --- routes: pocket → home --- */
+ if(ent>.55)for(const P of POCKETS)route(P);
+
+ /* --- coins --- */
+ if(!RM&&ent>.7)drawCoins(dtClamp,now);
+
+ /* --- pockets of the set --- */
+ c.save();
+ c.textAlign='center';
+ for(const P of POCKETS){
+  const w=view(P.v);
+  if(w.z<=.02){P._f=0;continue;}
+  const f=sm(.02,.30,w.z)*EA;P._f=f;
+  const sx=cx+w.x*R0*DPR,sy=cy-w.y*R0*DPR;
+  if(sx<-40||sx>W+40||sy<-40||sy>H-18*DPR)continue;
+  /* pin */
+  const pr=(2.6+1.5*f)*DPR;
+  c.globalCompositeOperation='lighter';
+  c.fillStyle='rgba(255,220,140,'+(.34*f)+')';
+  c.beginPath();c.arc(sx,sy,pr*2.6,0,TAU);c.fill();
+  c.globalCompositeOperation='source-over';
+  c.strokeStyle='rgba(244,222,158,'+(.75*f)+')';
+  c.lineWidth=1.1*DPR;
+  c.beginPath();c.arc(sx,sy,pr,0,TAU);c.stroke();
+  c.fillStyle='rgba(255,244,206,'+(.9*f)+')';
+  c.beginPath();c.arc(sx,sy,1.5*DPR,0,TAU);c.fill();
+  /* glyph beside the pin */
+  if(f>.5)glyph(P.g,sx+9*DPR,sy-9*DPR,(1+1.15*f)*DPR,f*.85);
+  /* label */
+  if(f>.55&&sy<H*.80){
+   const la=sm(.55,.92,f);
+   c.globalAlpha=la*EA*.9;
+   c.fillStyle='#efdca0';
+   c.font='600 '+(9.5*DPR)+'px Georgia,serif';
+   c.fillText(P.name,sx,sy-16*DPR);
+   c.globalAlpha=EA;
+  }
+ }
+ c.restore();
+
+ /* --- home beacon: Akoliufu Alayi --- */
+ {
+  const w=view(HOME.v);
+  if(w.z>0){
+   const f=sm(.02,.22,w.z)*EA;
+   const sx=cx+w.x*R0*DPR,sy=cy-w.y*R0*DPR;
+   /* expanding arrival pulses */
+   c.save();/*c.globalCompositeOperation='lighter';*/
+   for(const b of beacons){
+    const g=Math.min(1,b.t/.9);
+    c.strokeStyle='rgba(255,224,150,'+((1-g)*.6*f)+')';
+    c.lineWidth=1.4*DPR;
+    c.beginPath();c.arc(sx,sy,(4+g*26)*DPR,0,TAU);c.stroke();
+   }
+   /* living core */
+   const pulse=.6+.4*Math.sin(now*2.4);
+   const core=c.createRadialGradient(sx,sy,0,sx,sy,26*DPR);
+   core.addColorStop(0,'rgba(255,246,214,'+(.75*f)+')');
+   core.addColorStop(.4,'rgba(255,214,130,'+(.5*f*(.7+.3*pulse)+beacon*.4*f)+')');
+   core.addColorStop(1,'rgba(212,160,60,0)');
+   c.fillStyle=core;
+   c.beginPath();c.arc(sx,sy,26*DPR,0,TAU);c.fill();
+   /* small dwelling glyph: our roof at home */
+   c.strokeStyle='rgba(30,16,4,'+(.85*f)+')';
+   c.lineWidth=1.6*DPR;c.lineJoin='round';
+   c.fillStyle='rgba(250,222,140,'+(.95*f)+')';
+   c.beginPath();
+   c.moveTo(sx-6*DPR,sy+1.5*DPR);c.lineTo(sx,sy-5.5*DPR);c.lineTo(sx+6*DPR,sy+1.5*DPR);
+   c.closePath();c.fill();c.stroke();
+   c.fillStyle='rgba(250,222,140,'+(.9*f)+')';
+   c.fillRect(sx-3.6*DPR,sy+1.5*DPR,7.2*DPR,4.6*DPR);
+   c.fillStyle='rgba(40,22,6,'+(.9*f)+')';
+   c.fillRect(sx-1.15*DPR,sy+2.4*DPR,2.3*DPR,3.7*DPR);
+   /* label */
+   c.fillStyle='#f6e3ac';
+   c.globalAlpha=EA;
+   c.font='700 '+(10*DPR)+'px Georgia,serif';
+   c.fillText('AKOLIU FU ALAYI — HOME',sx,sy+18*DPR);
+   c.restore();
+  }
+ }
+ beacon=Math.max(0,beacon-dt*.9);
+ for(let i=beacons.length-1;i>=0;i--){beacons[i].t+=dt;if(beacons[i].t>.9)beacons.splice(i,1);}
+ c.globalAlpha=1;
+}
+let dtClamp=.016;
+
+
+/* ---------- reduced-motion: draw one calm, readable frame ---------- */
+if(RM){
+ ent=1;trig();resize();
+ render(performance.now());
+ /* static coins resting along routes */
+ for(const P of POCKETS){
+  for(const f of [.25,.5,.75]){
+   const v=slerp(P.v,HOME.v,f,P.O,P.sO);
+   const w=view(v);
+   if(w.z<=0)continue;
+   const rr=R0*(1+.115*Math.sin(Math.PI*f))*DPR;
+   c.fillStyle='rgba(255,238,190,.85)';
+   c.beginPath();c.arc(cx+w.x*rr,cy-w.y*rr,1.6*DPR,0,TAU);c.fill();
+  }
+ }
+ addEventListener('resize',()=>{ent=1;resize();});
+}else{
+ /* pointer parallax */
+ addEventListener('pointermove',e=>{
+  tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5;
+ },{passive:true});
+
+ (function loop(nowMs){
+  requestAnimationFrame(loop);
+  const active=s2.classList.contains('active')
+   &&document.body.dataset.view==='home'
+   &&!document.hidden;
+  if(!active){tPrev=0;return;}
+  if(!W)resize();        /* first activation: size the canvas before anything draws */
+  const dt=dtClamp=Math.min(.05,tPrev?(nowMs-tPrev)/1000:.016);
+  tPrev=nowMs;
+  if(tSeen<0)tSeen=nowMs;
+  const e=(nowMs-tSeen)/1000;
+  ent=sm(0,1.35,e);
+
+  /* the inconsistent rotation: layered incommensurate waves — the globe
+     hurries, slows, hesitates, almost halts, drifts back — then turns again */
+  const vv=.055*(0.85+.55*Math.sin(e*.31)+.34*Math.sin(e*.73+2.1)
+        +.22*Math.sin(e*1.13+4.2)+.12*Math.sin(e*.17+1));
+  yaw+=vv*dt;
+  tilt=(6+6.5*Math.sin(e*.09+1.3))*D2R;
+  px+=(tx-px)*.045;py+=(ty-py)*.045;
+  yaw+=px*.005*dt*60;            /* gentle parallax sway on yaw */
+  trig();
+
+  /* coins */
+  if(nowMs>spawnT)spawn(nowMs);
+
+  render(nowMs);
+ })(0);
+}
+})();
 
 /* ===== GALLERY ===== */
 /* Replace src:'' with your photo URL (and video:'' with an mp4) to show real media. */
