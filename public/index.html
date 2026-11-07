@@ -370,9 +370,18 @@ footer img{width:60px;border-radius:50%;margin-bottom:.8rem}
 @keyframes atl{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
 #s2 .slide-copy{bottom:6.5vh}
 #s2 .rule,#s2 .village{display:none}
-#s2 .motto{font-size:clamp(.9rem,2.2vw,1.18rem);max-width:66ch}
+#s2 .motto{font-size:clamp(.9rem,2.2vw,1.18rem);max-width:62ch;margin-left:auto;margin-right:auto}
+#copy2 .submotto{
+  margin-top:1.6vh;font-size:clamp(.6rem,1.05vw,.72rem);
+  letter-spacing:.3em;text-transform:uppercase;color:#a89873;
+  line-height:1.75;text-shadow:0 1px 14px rgba(0,0,0,.9);
+}
 @media(max-width:700px){
   #copy2 .motto{font-size:clamp(.82rem,3.3vw,1rem)}
+  #copy2 .submotto{
+    letter-spacing:.14em;line-height:1.9;font-size:.58rem;
+    max-width:19rem;margin-left:auto;margin-right:auto;
+  }
 }
 </style>
 
@@ -611,10 +620,11 @@ footer{background:linear-gradient(180deg,#050505,#020202)}
   100%{opacity:1;letter-spacing:.19em;filter:blur(0) drop-shadow(0 2px 24px rgba(212,175,55,.4))}
 }
 #copy2.show .motto{animation:mottoIn 1.6s ease .5s both}
+#copy2.show .submotto{animation:mottoIn 1.6s ease 1.05s both}
 @keyframes mottoIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
 
 @media(max-width:700px){
-  #s2 .slide-copy{bottom:4.5vh}
+  #s2 .slide-copy{bottom:11vh}
   #copy2 h1{font-size:clamp(1.3rem,7.2vw,2rem);letter-spacing:.15em}
   @keyframes titleReveal{
     0%{opacity:0;letter-spacing:.34em;filter:blur(9px)}
@@ -624,7 +634,7 @@ footer{background:linear-gradient(180deg,#050505,#020202)}
 @media(prefers-reduced-motion:reduce){
   #s1 .medallion-stage::after{display:none}
   #s1 .halo::before,#s1 .halo::after{display:none}
-  #copy2.show h1,#copy2.show .motto{animation:none}
+  #copy2.show h1,#copy2.show .motto,#copy2.show .submotto{animation:none}
 }
 
 /* Location map + live weather */
@@ -827,7 +837,8 @@ footer>div:last-child{color:#9d8f66;letter-spacing:.2em;font-size:.72rem}
       <div class="slide-copy" id="copy2">
         <div class="rule"></div>
         <h1><span class="gold">AKU RUO ULO</span></h1>
-        <p class="motto">From every city where the set earns, the wealth finds its way home.</p>
+        <p class="motto">Every city where a member earns is a road that leads home.</p>
+        <p class="submotto">Wherever the set earns, home is the destination.</p>
         <p class="village">Ikejimba Age Grade Foundation</p>
       </div>
     </div>
