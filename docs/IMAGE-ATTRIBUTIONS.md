@@ -61,6 +61,7 @@ They were selected, cropped and compressed (≤300 KB) for the site:
 | uniform-portrait.jpg | IMG_20251206_144027_058.jpg | Member in official uniform |
 | cultural-day-2025.jpg | Pink Black Bold Modern Music Event Poster_20251207_214809_0000.png | Alayi Cultural Day 2025 invitation (clean flyer) |
 | cultural-day-invitation.jpg | Brown and Yellow Traditional Dandiya and Garba Night Facebook Ad_20251207_105110_0000.png | Cultural Day invitation, kente edition |
+| green-drive-planting-day.jpg | 1794153526947.jpg (owner-supplied 2026-11-08) | Members planting seedlings at the Green Economy Movement launch, Akoliufu Alayi |
 
 Curation note: funeral/memorial WhatsApp images, night snapshots and watermarked app screenshots from the source folder were deliberately excluded.
 The invitations spell the community "Akoliufu Alayi"; the site's existing copy uses "Akoliufu Alayi" — the association should confirm the official spelling at Assembly.
